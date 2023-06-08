@@ -3,7 +3,7 @@ import websocket
 def on_open(ws):
     print("Connection opened")
     # Send a message to the WebSocket
-    ws.send("Hello, Chameera!")
+    ws.send("Hello, Integration!")
 
 def on_message(ws, message):
     print("Received message:", message)
