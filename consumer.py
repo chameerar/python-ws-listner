@@ -1,4 +1,7 @@
 import websocket
+import os
+
+url = os.getenv("WS_URL")
 
 def on_open(ws):
     print("Connection opened")
@@ -15,7 +18,7 @@ def on_close(ws):
     print("Connection closed")
 
 # Create a WebSocket connection
-ws = websocket.WebSocketApp("wss://ws.postman-echo.com/raw/",
+ws = websocket.WebSocketApp(url,
                             on_open=on_open,
                             on_message=on_message,
                             on_error=on_error,
